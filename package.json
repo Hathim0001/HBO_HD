@@ -1,6 +1,29 @@
 {
+  "name": "mern-stack-movie-2022",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "tuat tran anh",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server/importData.js"
+  },
   "dependencies": {
-    "axios": "^1.7.9",
-    "dotenv": "^16.4.7"
+    "axios": "^1.2.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.5",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
   }
 }
